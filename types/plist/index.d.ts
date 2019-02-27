@@ -11,9 +11,9 @@ import { XMLToStringOptions } from 'xmlbuilder';
 export as namespace plist;
 
 // plist.parse()
-export function parse(xml: string): PlistValue;
+export function parse<T extends PlistValue>(xml: string): T;
 // plist.build()
-export function build(obj: PlistValue, opts?: PlistBuildOptions): string;
+export function build<T extends PlistValue>(obj: T, opts?: PlistBuildOptions): string;
 
 // PlistValue
 export type PlistValue =
